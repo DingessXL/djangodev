@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyTrivia</title>
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'trivia/style.css' %}">
+</head>
+<div class="page-header">
+    <h1>Trivia Application</h1>
+    Header
+</div>
+<body>
+{% block content %}
+
+{% endblock %}
+</body>
+<div class="page-footer">
+    Footer of Application
+    <div class="wrapper">
+        <ul class="footer-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Site by: Daniel Dingess</a></li>
+        </ul>
+    </div>
+</div>
+</html>

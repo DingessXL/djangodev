@@ -1,0 +1,8 @@
+{% extends "trivia/base.html" %}
+{% block content %}
+<form action="{{ action }}" method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="Add" />
+</form>
+{% endblock %}}
