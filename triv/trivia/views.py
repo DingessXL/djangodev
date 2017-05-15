@@ -2,7 +2,8 @@
 from __future__ import unicode_literals
 from django.forms import modelformset_factory, forms
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
+from django.template import RequestContext
 from django.views.generic import CreateView
 from django.views.generic import UpdateView
 from .models import Question, Category
@@ -12,13 +13,6 @@ from .forms import QuestionForm, CategoryForm
 
 
 # Create your views here.
-def index(request):
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    template = loader.get_template('polls/index.html')
-    context = {'latest_question_list': latest_question_list, }
-    return HttpResponse(template.render(context, request))
-
-
 class CreateQuestionView(CreateView):
     model = Question
     template_name = 'trivia/manage.html'
@@ -35,3 +29,8 @@ class CreateCategoryView(CreateView):
     model = Category
     template_name = 'trivia/new_cat.html'
     form_class = CategoryForm
+
+
+def last_ten_questions(request):
+    questions = Question.objects.all()  # .order_by('-id')[:10][::-1]
+    return render(request, 'trivia/base.html', {'questions': questions})

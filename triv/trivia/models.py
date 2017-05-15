@@ -26,4 +26,4 @@ class Question(models.Model):
         return self.question_text
 
     class Meta:
-        unique_together = ["question_text","answer_text", "question_category"]
+        unique_together = ["question_text", "answer_text", "question_category"]

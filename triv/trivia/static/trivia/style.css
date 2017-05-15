@@ -8,7 +8,7 @@ html{
 form{
     background: lawngreen;
     box-shadow: black 3px 3px 3px;
-    padding: 10px;
+    padding: 25px;
     text-align: center;
     font-family: "Open Sans", sans-serif;
 }
@@ -60,4 +60,38 @@ a{
     padding-right: 10px;
     font-family: "Open Sans",serif;
     right: 0;
+}
+.create-new-container{
+    min-height: 100px;
+    padding: 25px;
+    text-align: center;
+    background: lightgrey;
+    font-family: "Open Sans", sans-serif;
+}
+.create-new-container .button-wrapper{
+    margin-top: 25px;
+}
+.create-new-container button{
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 24px;
+    font-family: "Pathway Gothic One", sans-serif;
+    display: inline-block;
+    border-radius: 0;
+    box-shadow: 0;
+    background-color: lightgrey;
+    border: 2px solid lawngreen;
+}
+.create-new-container button:hover{
+    background-color: rgba(124, 252, 0, .4);
+}
+button a{
+    text-decoration: none;
+    color: #2b2b2b;
+}
+
+.last-ten-container{
+    background: lawngreen;
+    margin: 0 auto;
+    padding: 10px;
 }

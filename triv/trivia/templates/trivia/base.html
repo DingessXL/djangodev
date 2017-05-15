@@ -18,8 +18,26 @@
 
 {% endblock %}
 </body>
+<div class="create-new-container">
+    Make a contribution!
+    <div class="button-wrapper">
+        <a href="../manage/">
+            <button>New Question</button>
+        </a>
+        <a href="../new_cat/">
+            <button>New Category</button>
+        </a>
+    </div>
+</div>
+<div class="last-ten-container">
+        Latest Questions:
+    <ul>
+        {% for q in last_10_list %}
+        <li>{{ q.question_text }}</li>
+        {% endfor %}
+    </ul>
+</div>
 <div class="page-footer">
-    Footer of Application
     <div class="wrapper">
         <ul class="footer-list">
             <li><a href="#">Home</a></li>
