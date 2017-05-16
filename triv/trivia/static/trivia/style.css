@@ -13,7 +13,7 @@ form{
     font-family: "Open Sans", sans-serif;
 }
 
-p{
+form p{
     background: lawngreen;
     color: white;
     text-align: center;
@@ -94,4 +94,8 @@ button a{
     background: lawngreen;
     margin: 0 auto;
     padding: 10px;
+    font-family: "Open Sans", sans-serif;
+}
+.last-ten-container ol{
+    border: 2px black solid;
 }
